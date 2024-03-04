@@ -622,7 +622,7 @@ function add_git_remote() {
         fi
     else
         info "### Adding photoboothproject remote..."
-        sudo -u www-data git remote add photoboothproject https://github.com/PhotoboothProject/photobooth.git
+        sudo -u www-data git remote add photoboothproject https://github.com/vierpi/photobooth.git
     fi
 }
 
@@ -674,7 +674,7 @@ function start_git_install() {
 function start_install() {
     info "### Now we are going to install Photobooth."
     if [ "$GIT_INSTALL" = true ]; then
-        sudo -u www-data git clone https://github.com/PhotoboothProject/photobooth "$INSTALLFOLDER"
+        sudo -u www-data git clone https://github.com/vierpi/photobooth "$INSTALLFOLDER"
         cd "$INSTALLFOLDERPATH"
         add_git_remote
         start_git_install
